@@ -1,0 +1,457 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Navbar */
+
+nav.menu-lateral{
+    width: 80px;
+    height: 100%;
+    background-color: black;
+    padding: 40px 0 40px 1%;
+    box-shadow: 3px 0 15px #FD5805;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: .5s;
+    overflow: hidden;
+        z-index: 1;
+}
+
+nav.menu-lateral.expandir{
+    width: 300px;
+}
+
+.btn-expandir{
+    width: 100%;
+    padding-left: 10px;
+}
+
+.btn-expandir > i{
+    color: white;
+    font-size: 45px;
+    cursor: pointer;
+}
+
+ul{
+    height: 100%;
+    list-style: none;
+
+}
+
+ul li.item-menu{
+    transition: .5s;
+}
+
+ul li.ativo{
+    background-color: #FD5805;
+    box-shadow: 0 0 5px 2px #FD5805;
+}
+
+ul li.item-menu:hover{
+    background: #FD5805;
+}
+
+ul li.item-menu a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 20px 4%;
+    display: flex;
+    margin-bottom: 20px;
+    line-height: 32px;
+}
+
+ul li.item-menu a .txt-link{
+    margin-left: 100px;
+    transition: .5s;
+    opacity: 0;
+    font-size: 0px;
+}
+
+nav.menu-lateral.expandir .txt-link{
+    margin-left: 40px;
+    opacity: 1;
+    font-size: 1.2em;
+}
+
+ul li.item-menu a .icon > i{
+    font-size: 30px;
+    margin-left: 10px;
+}
+
+/* Fim */
+
+/* Conteudo */
+
+/* Body padrão */
+.interface{
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.body{
+    background-color: #0E1113;
+    width: 25 0vh;
+    height: 100vh;
+    margin-left: 58px;
+    padding: 0px;
+}
+
+/* Fim Body padrão */
+
+/* Cabeçario */
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 25px;
+    color: white;
+    margin: 0 10px;
+}
+
+header h1{
+    font-size: 2em;
+    font-weight: 700;
+}
+
+header .btn-add{
+    color: white;
+    background: #be4f17;
+    width: 150px;
+    height: 50px;
+    font-size: 1em;
+    border-radius: 2px;
+    border: none;
+    cursor: not-allowed;
+}
+
+header .btn-add:hover{
+    box-shadow: 0 0 3px 2px #ca4705;
+    transform: scale(1.05);
+}
+
+/* Fim Cabeçario */
+
+/* Conteudo */
+
+/* Body padrão */
+.interface{
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.body{
+    background-color: #0E1113;
+    width: 25 0vh;
+    height: 100vh;
+    margin-left: 58px;
+    padding: 0px;
+}
+
+/* Fim Body padrão */
+
+/* Inputs */
+ 
+section.form{
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+}
+
+section.form legend{
+  color: white;
+  font-size: 1em;
+}
+
+section.form fieldset{
+  border: 2px solid white;
+  padding: 10px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+section.form label{
+  color: white;
+  font-size: 1.1em;
+}
+
+section.form .lab{
+  color: white;
+  font-size: 1em;
+  display: inline-flex;
+  align-items: center;
+  vertical-align: middle;
+  line-height: 1;
+  margin-right: 10px;
+  order: 2;
+  
+}
+
+section.form input[type="checkbox"]{
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: #1d1b1b;
+  border: 2px solid #000000;
+  padding: 7px;
+  border-radius: 4px;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  order: 1;
+  vertical-align: middle;
+  margin-right: 5px;
+  z-index: 0;
+}
+
+section.form input[type="checkbox"]:checked {
+  background-color: #FFA500;
+  border-color: rgba(200, 100, 0, 1);
+}
+
+section.form input[type="checkbox"]:checked::after {
+  content: "✔";
+  color: white;
+  font-size: 12px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+section.form input[type="text"]{
+  border: 1px solid #000000;
+  background-color: #1d1b1b;
+  color: white;
+  width: 97.5%;
+  padding: 5px;
+}
+
+        .file-upload-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            max-width: 100%;
+        }
+
+        .file-upload-label {
+            padding: 12px 24px;
+            background-color: #1d1b1b;
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s;
+            text-align: center;
+            font-size: 1em;
+            font-weight: 400;
+            box-sizing: border-box;
+            order: 1;
+            width: 100%;
+        }
+
+        .file-upload-label:hover {
+            background-color: #444;
+        }
+
+        #file-input {
+            display: none;
+        }
+
+        .preview-box {
+            width: 300px;
+            height: 150px;
+            border-radius: 4px;
+            overflow: hidden;
+            display: none;
+            background-color: #111;
+            border: 2px solid #333;
+            order: 2;
+        }
+
+        #image-preview {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: block;
+        }
+
+.exercise{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.exercise button{
+  padding: 6px 12px;
+  background-color: #1d1b1b;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 1em;
+  width: 100%;
+  border: none;
+  margin: 10px;
+}
+
+.exercise button:hover{
+  background-color: #444;
+}
+
+  .text{
+  border: 1px solid #000000;
+  background-color: #1d1b1b;
+  color: white;
+  width: 97.5%;
+  padding: 5px;
+  margin: 5px;
+}
+
+  .modal_exerc {
+    position: fixed;
+    z-index: 5;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .modal_exerc-conteudo {
+    background: #0c0c0ce0;
+    padding: 20px;
+    border-radius: 8px;
+    max-height: 80vh;
+    overflow-y: auto;
+    width: 80%;
+    max-width: 500px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    position: relative;
+    color: white;
+  }
+
+  .fechar_exerc {
+    position: absolute;
+    top: 10px; right: 15px;
+    font-size: 28px;
+    cursor: pointer;
+  }
+  
+  .lista-exercicios label:hover {
+    background-color: #0c0c0c;
+    border: 2px solid black;
+    border-radius: 10px;
+  }
+
+.btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn button{
+  padding: 6px 12px;
+  background-color: #FD5805;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 1em;
+  width: 100%;
+  border: none;
+  margin: 10px;
+}
+
+.btn button:hover{
+  background-color: #FD5805;
+  transform: scale(1.05);
+  box-shadow: 0 0 3px 2px #ca4705;
+}
+
+
+@media screen and (max-width: 878px) {
+    .interface header h1{
+        font-size: 1.5em;
+    }
+
+    header .btn-add{
+        display: none;
+    }
+
+    .body{
+        height: 101vh;
+    }
+
+section.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section.form legend {
+  font-size: 0.8em;
+  padding: 0 10px;
+}
+
+section.form fieldset {
+  padding: 5px 15px;
+}
+
+section.form .lab {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.9em;
+  padding: 1.5px 0;
+  line-height: 1;
+}
+
+
+section.form input[type="text"]{
+  width: 80%;
+}
+
+.file-upload-container {
+  flex-direction: none;
+  align-items: flex-start ;
+  justify-content: start;
+  gap: 5px;
+}
+
+.btn button{
+  font-size: .8em;
+  width: 75%;
+}
+
+.btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center ;
+  justify-content: start;
+  max-width: 100%;
+}
+.exercise{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  height: 50px;
+  margin-top: 10px;
+}
+
+.exercise button{
+  font-size: .8em;
+  width: 75%;
+}
+
+  }

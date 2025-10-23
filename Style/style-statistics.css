@@ -1,0 +1,376 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+ul li.statistics {
+    background-color: #FD5805;
+    box-shadow: 0 0 5px 2px #FD5805;
+}
+
+body {
+    background-color: #0E1113;
+}
+
+/* Conteudo */
+
+/* Body padrão */
+.interface {
+    max-width: 1280px;
+    margin: auto 2vw auto 5vw;
+    padding: 0;
+    opacity: 0;
+    transform: translateY(-30px);
+    animation: aparecerDeCima 0.8s ease-out forwards;
+}
+
+@keyframes aparecerDeCima {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.body {
+    overflow-x: hidden;
+    width: 25 0vh;
+    margin-left: 60px;
+    padding: 0px;
+}
+
+/* Fim Body padrão */
+
+/* Cabeçario */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0;
+    color: white;
+}
+
+.header h1 {
+    font-size: 2em;
+    font-weight: 700;
+}
+
+/* Fim Cabeçario */
+
+/* Calendario */
+.calendar {
+    background-color: #0E1113;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    overflow: hidden;
+    width: 300px;
+    color: white;
+    padding: 20px;
+}
+
+.headerCalendar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.btnCalendar {
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#month-year {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.weekdays,
+.days {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.days {
+    height: 250px;
+}
+
+.weekdays div,
+.days div {
+    width: 14.28%;
+    text-align: center;
+    padding: 10px 0;
+    border-radius: 5px;
+}
+
+.days div {
+    cursor: pointer;
+    transition: .3s;
+}
+
+.days div:hover {
+    background-color: #FD5805;
+
+}
+
+.days .today {
+    background-color: #FD5805;
+}
+
+.completed {
+    background-color: #ca4705;
+}
+
+.days .fade {
+    color: #333;
+}
+
+/* Fim calendario */
+
+/* Contents */
+.contents {
+    flex: 1;
+    display: none;
+    flex-direction: column;
+    color: white;
+}
+
+.contents.active {
+    display: flex;
+}
+
+/* Fim Contents */
+
+/* Sessão Principal */
+.statistic {
+    margin-left: 120px;
+    margin-right: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+/* Fim Sessão */
+
+/* divs */
+
+/* Div do calendário */
+.statsiticsCalendar {
+    flex: 0 0 auto;
+    width: 320px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+/* Div de estatísticas */
+.statsiticsText {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    max-width: 600px;
+}
+
+.statsiticsText .buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.statsiticsText legend {
+    font-size: 1.2em;
+    padding: 5px;
+    font-weight: 700;
+    margin-left: 10px;
+}
+
+.statsiticsText fieldset {
+    border-radius: 10px;
+    padding: 15px 10px;
+}
+
+#historico {
+    max-height: 350px;
+    overflow-y: auto;
+    width: 100%;
+    padding-right: 5px;
+}
+
+.historico {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Fim divs */
+
+/* Botões */
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background: #151A1D;
+    color: white;
+    border: 1px solid #FD5805;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .5s;
+    margin: 0 10px;
+}
+
+.btn.active,
+.btn:hover {
+    background: #FD5805;
+    color: white;
+}
+
+/* Fim Botões */
+
+/* Textos */
+h3 {
+    font-size: 1.1em;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+}
+
+.statsiticsText span {
+    font-weight: 400;
+}
+
+.img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 7.5%;
+    margin-top: 7.5%;
+}
+
+/* Fim Textos */
+
+/* Responsividade */
+
+@media screen and (max-width: 878px) {
+
+    .interface {
+        margin: 0;
+    }
+
+    .header {
+        flex-direction: column;
+        text-align: left;
+        padding: 10px 0;
+    }
+
+    .header h1 {
+        font-size: 1.3em;
+        margin-bottom: 5px;
+    }
+
+    .header h1 {
+        font-size: 1.5em;
+    }
+
+    .calendar {
+        width: 250px;
+        padding: 20px;
+        margin: 10px 0;
+    }
+
+    .headerCalendar {
+        padding: 10px;
+    }
+
+    #month-year {
+        font-size: 1.2em;
+        margin-bottom: 10px;
+    }
+
+    .days {
+        height: 200px;
+    }
+
+    .weekdays div,
+    .days div {
+        padding: 2px 0;
+    }
+
+    .contents {
+        display: none;
+        flex-direction: column;
+    }
+
+    .statistic {
+        margin-left: 0px;
+        margin-right: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 30px;
+    }
+
+    .statsiticsText {
+        display: flex;
+        justify-content: center;
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .statsiticsText .buttons {
+        padding: 6px;
+        margin: 0px 10px;
+        font-size: .9em;
+    }
+
+    .statsiticsText legend {
+        font-size: 1.1em;
+    }
+
+    .statsiticsText fieldset {
+        padding: 5px 10px;
+        max-width: 275px;
+        margin-left: 15px;
+    }
+
+    #historico {
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .btn {
+        padding: 10px;
+        margin: 0px 10px;
+        font-size: 1em;
+    }
+
+    h3 {
+        font-size: 1em;
+        display: block;
+        overflow: hidden;
+        margin-bottom: 10px;
+    }
+
+    .img {
+        margin-bottom: 5%;
+        margin-top: 5%;
+    }
+}
+
+/* Fim */

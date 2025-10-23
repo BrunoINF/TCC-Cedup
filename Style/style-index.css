@@ -1,0 +1,320 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat","Poppins", sans-serif;
+}
+
+.interface{
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 0 0;
+}
+
+header button, .hero-site button, .introduction button{
+    font-size: 20px;
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    cursor: pointer;
+    transition: .5s;
+    border-radius: 7px;
+    padding: 10px 20px;
+}
+
+header button:hover, .hero-site button:hover, .introduction button:hover{
+    background-color: #FD5805;
+    border: 1px solid #FD5805;
+    box-shadow: 0 0 15px 5px #FD5805;
+}
+
+
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #1d1c1c;
+}
+
+/* Estilo Cabeçario */
+header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: .5s;
+    z-index: 5;
+}
+
+header .interface{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .menu-desktop nav ul{
+    list-style-type: none;
+}
+header .menu-desktop nav ul li{
+    display: inline-block;
+    margin: 0 15px;
+}
+
+header .logo{
+    display: flex;
+    align-items: justify;
+    justify-content: justify;
+    width: 25%;
+}
+
+header .logo label{
+    line-height: 80px;
+    color: white;
+    font-size: 2em;
+    margin: 0 10px;
+    font-weight: 500;
+}
+
+header .logo img{
+    max-width: 80px;
+}
+
+/* Cabeçario dinamico */
+header.roll{
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(15px);
+    padding: 10px 0;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+    z-index: 5;
+}
+
+/* Fim cabeçario dinamico */
+
+/* Fim cabeçario */
+
+/* Estilo Hero */
+
+section.hero-site{
+    height: 100dvh;
+    background-image: url(../Images/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.hero-site > .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .6);
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.hero-site > .interface{
+    display: flex;
+    align-items: center;
+    height: 100%; 
+    z-index: 2;
+    position: relative;
+}
+
+.hero-site .txt-hero h1{
+    font-size: 4em;
+    line-height: 70px;
+    font-weight: 400;
+    z-index: 3;
+}
+
+.hero-site .txt-hero h1 span{
+    font-weight: 600;
+}
+
+.hero-site .txt-hero p{
+    font-size: 1.5em;
+    font-weight: 300;
+    margin: 20px 0;
+    text-shadow: 5px 3px 5px rgb(255, 255, 255, 0.3);
+}
+.hero-site .txt-hero p span{
+    display: block;
+}
+
+.hero-site button{
+    padding: 15px 45px;
+    font-size: 20px;
+    border: 2px solid#FD5805;
+}
+
+/* Fim Hero */
+
+/* Incio Introdução */
+section.introduction{
+    padding: 80px 0;
+}
+
+.introduction article{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10%;
+    margin-bottom: 10px;
+}
+
+.introduction h1{
+    color: white;
+    font-weight: 400;
+    font-size: 3em;
+}
+
+.introduction h1 span{
+    display: block;
+    font-weight: 800;
+    background-image: linear-gradient(180deg,#FD5805 ,#c92626);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+      
+}
+
+.introduction button{
+    margin: 10px 10px;
+}
+
+.introduction .img-introduction{
+    height: 65vh;
+    width: 500px;
+    background-image: url(../Images/homan-training.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Fim Introdução */
+
+/* Rodapé Inicio */
+
+footer{
+    background-color: #0E1113;
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+    
+}
+
+footer .middle-footer{
+    margin: 20px 0;
+}
+
+footer .middle-footer a{
+    color: lightgray;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+footer .middle-footer a:hover{
+    color: white;
+}
+
+footer .bottom-footer{
+    border-top: 2px solid white;  
+}
+
+footer .bottom-footer p{
+    font-size: 1em;
+    color: lightgray;   
+    margin-top: 10px;
+}
+
+/* Fim Rodapé */
+
+/* Responcividade */
+
+/* Estilo botão menu mobile */
+@media screen and (max-width: 900px) {
+
+header .logo{
+    display: flex;
+    align-items: center;
+}
+
+#img{
+    height: 50px;
+}
+
+header .logo label{
+    font-size: 1.7em;
+}
+
+header button{
+display: none;
+}
+}
+
+@media screen and (max-width: 878px) {
+/* Responsivo hero */
+section.hero-site{
+    height: 100dvh;
+}
+
+.hero-site .txt-hero h1{
+    font-size: 3em;
+    line-height: 45px;
+}
+
+.hero-site .txt-hero p{
+    font-size: 1.2em;
+}
+
+.hero-site .txt-hero p span{
+    display: inline;
+}
+
+.hero-site button{
+    font-size: 1.2em;
+}
+
+/* Fim Hero */
+
+/* Responsividade Introdução */
+.introduction article{
+    flex-direction: column;
+}
+
+.introduction h1{
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+.introduction .txt-introduction{
+    display: block;
+    margin-left: 5%;
+}
+
+.introduction .btn-log{
+    margin-left: -10px;
+}
+
+.introduction .img-introduction{
+    height: 50vh;
+    width: 450px;
+}
+
+/* Fim Introdução */
+
+/* Responnsividade Rodapé */
+
+footer .middle-footer a{
+    display: block;
+    margin: 15px 0;
+}
+
+footer .bottom-footer p{
+    font-size: 14px;
+}
+
+}
+/* Fim Rodapé */
+/* Fim responcividade */

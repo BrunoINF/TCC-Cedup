@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!-- Fim -->
+    <link rel="shortcut icon" href="../Images/Logo.png" type="image/x-icon">
+    <title>Edição de usuario</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body {
+            background-color: #0B0E0F;
+        }
+
+        .DeletePop {
+            background: transparent !important;
+            border: 1px solid greenyellow;
+            font-weight: 600 !important;
+            transition: 0.3s !important;
+
+            &:hover {
+                box-shadow: 0px 0px 10px greenyellow;
+            }
+        }
+    </style>
+</head>
+
+
+<?php
+include("connection.php");
+include("verify.php");
+$_SESSION['back'] = null;
+
+$id_login = $_SESSION['cpf'];
+
+$email = $_POST['email'];
+$senha = $_POST['password'];
+
+$sql = "UPDATE usuario 
+        SET email = '$email',
+            senha = '" . md5($senha) . "'
+        WHERE cpf = $id_login";
+
+if (mysqli_query($id, $sql)) { ?>
+
+    <body>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script>
+            Swal.fire({
+                title: "Usuario editado com sucesso!",
+                icon: "success",
+                denyButtonText: "Cancelar",
+                background: "#0C0E11",
+                color: "#fff",
+                confirmButtonText: "Voltar",
+                customClass: {
+                    confirmButton: 'DeletePop',
+                }
+            }).then(() => {
+                window.location.href = '../user.php'
+            });
+        </script>
+    </body>
+
+    <?php
+    exit();
+} else {
+    $error = mysqli_error($id);
+    ?>
+
+    <body>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script>
+            Swal.fire({
+                title: "Usuario editado com sucesso!",
+                icon: "success",
+                denyButtonText: "Cancelar",
+                background: "#0C0E11",
+                color: "#fff",
+                confirmButtonText: "Voltar",
+                customClass: {
+                    confirmButton: 'DeletePop',
+                }
+            }).then(() => {
+                window.location.href = '../user.php'
+            });
+        </script>
+    </body>
+    <?php
+    exit();
+}
+;
+?>

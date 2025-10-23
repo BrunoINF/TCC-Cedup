@@ -1,0 +1,89 @@
+:root {
+    --cursor-default: url('../Images/cursor-default.png'), default;
+    --cursor-pointer: url('../Images/pointer.png'), pointer;
+    --cursor-text: url('../Images/text.png'), text;
+    --cursor-not-allowed: url('../Images/block.png'), not-allowed;
+}
+
+::-webkit-scrollbar {
+    background-color: #0E1113;
+    width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #FD5805, #f55f29);
+    border-radius: 15px;
+    transition: .2s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #f55f29;
+}
+
+::selection {
+    background-color: #fd580536;
+    color: white;
+}
+
+body,
+span:hover,
+.calendar {
+    cursor: var(--cursor-default);
+    overflow-x: hidden;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+a:hover,
+button:not([disabled]),
+i:hover,
+article:hover {
+    cursor: var(--cursor-pointer);
+}
+
+input,
+textarea {
+    cursor: var(--cursor-text);
+}
+
+[disabled] {
+    cursor: var(--cursor-not-allowed);
+}
+
+/* Pop-Up */
+
+.ConfirmPop {
+    background: transparent !important;
+    border: 1px solid greenyellow;
+    font-weight: 600 !important;
+    transition: 0.3s !important;
+
+    &:hover {
+        box-shadow: 0px 0px 10px greenyellow;
+    }
+}
+
+.CancelPop {
+    background: transparent !important;
+    border: 1px solid gray;
+    font-weight: 600 !important;
+    transition: 0.3s !important;
+
+    &:hover {
+        box-shadow: 0px 0px 10px gray;
+    }
+}
+
+.DeletePop {
+    background: transparent !important;
+    border: 1px solid red;
+    font-weight: 600 !important;
+    transition: 0.3s !important;
+
+    &:hover {
+        box-shadow: 0px 0px 10px red;
+    }
+}
+
+/* Fim Pop-ups */

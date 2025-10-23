@@ -1,0 +1,946 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #0E1113;
+
+}
+
+ul li.dashboard {
+    background-color: #FD5805;
+    box-shadow: 0 0 5px 2px #FD5805;
+}
+
+/* Conteudo */
+
+/* Body padrão */
+.interface {
+    max-width: 1280px;
+    margin: auto 2vw auto 5vw;
+    padding: 0;
+    opacity: 0;
+    transform: translateY(-30px);
+    animation: aparecerDeCima 0.8s ease-out forwards;
+}
+
+@keyframes aparecerDeCima {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.body {
+    width: 25 0vh;
+    height: 100vh;
+    margin-left: 60px;
+    padding: 0px;
+}
+
+section.trainings h1 {
+    font-size: 1.5em;
+    color: white;
+    font-weight: 500;
+}
+
+.buttons {
+    display: flex;
+    justify-content: left;
+    gap: 20px;
+    width: 100%;
+}
+
+/* Fim Body padrão */
+
+/* Cabeçario */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 25px 25px 0;
+    color: white;
+}
+
+.header h1 {
+    font-size: 2em;
+    font-weight: 700;
+}
+
+.header .btn-add {
+    color: white;
+    background: #FD5805;
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 2px;
+    border: none;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.header .btn-add:hover {
+    box-shadow: 0 0 3px 2px #ca4705;
+    transform: scale(1.05);
+}
+
+/* Fim Cabeçario */
+
+/* Treinos */
+article.trainingP {
+    background-color: #151A1D;
+    z-index: 1;
+    width: 100%;
+    height: 13vh;
+    margin: 20px 0px;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    cursor: pointer;
+    border-radius: 7px;
+    padding-left: 15px;
+}
+
+a article.trainingP {
+    color: white;
+    text-decoration: none;
+}
+
+a article.trainingP {
+    font-size: 1.3em;
+}
+
+a article.trainingP span.time-training {
+    margin: 10px;
+    font-size: .8em;
+    color: lightgray;
+}
+
+/* Estilo Content */
+
+.btn {
+    color: white;
+    background: #151A1D;
+    border: 1px solid #FD5805;
+    padding: 10px;
+    border-radius: 7px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.btn.active,
+.btn:hover {
+    background: #FD5805;
+    color: white;
+}
+
+.contents {
+    display: none;
+}
+
+.contents img {
+    width: 40px;
+    height: 40px;
+}
+
+.contents.active {
+    display: block;
+    margin-top: 20px;
+    color: white;
+}
+
+.nada {
+    color: lightgray;
+    font-size: 1.5em;
+}
+
+.Nada {
+    text-align: center;
+    width: 100%;
+}
+
+.modal-content h1 {
+    font-size: 1.5em;
+    padding: 20px 0;
+    text-align: justify;
+    line-height: 20px;
+    font-weight: 500;
+    display: block;
+    margin-bottom: 10px;
+    animation: slide-in 0.5s ease-out 0.2s both;
+}
+
+/* Estilo Treino Personalizado */
+
+i {
+    text-align: left;
+}
+
+.search #searchBar {
+    background-color: #151A1D;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+    width: 100%;
+    margin: 20px 20px 0 0;
+    outline: none;
+}
+
+article.training {
+    background-color: #151A1D;
+    z-index: 1;
+    width: 100%;
+    height: 80px;
+    margin: 0 20px 20px 0;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    cursor: pointer;
+    border-radius: 7px;
+}
+
+article.training .txt-training {
+    display: flex;
+    line-height: 20px;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+article.training .time-training span {
+    margin: 10px;
+    color: lightgray;
+}
+
+article.training img {
+    width: 70px;
+    height: 70px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a article {
+    transition: .2s;
+}
+
+a article:hover {
+    transform: scale(1.008);
+}
+
+article.training span#nome {
+    color: white;
+    font-size: 1em;
+    font-weight: 500;
+    display: inline-block;
+    max-width: 900px;
+    min-width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    vertical-align: top;
+}
+
+article.training p {
+    display: block;
+    color: lightgray;
+}
+
+
+.add {
+    background-color: transparent;
+    font-size: 1em;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+    width: 100%;
+    margin: 20px 20px 0 20px;
+    outline: none;
+    transition: .3s;
+}
+
+
+/* Fim */
+
+/* Criar Treino */
+
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.8) rotate(-5deg);
+    }
+
+    50% {
+        transform: translate(-50%, -50%) scale(1.05) rotate(2deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1) rotate(0deg);
+    }
+}
+
+dialog#CTModal[open] {
+    animation: fadeIn 0.4s ease forwards;
+}
+
+dialog#CTModal {
+    background: rgba(14, 17, 19, 0.85);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0px;
+    border: none;
+    opacity: 0;
+    transition: 0.3s;
+    height: 500px;
+    width: 500px;
+    color: white;
+    overflow: hidden;
+}
+
+dialog#CTModal header {
+    display: static;
+    align-items: start;
+    padding: 0;
+    margin: 0;
+}
+
+dialog#CTModal[open] {
+    opacity: 1;
+}
+
+dialog#CTModal:not([open]) {
+    display: none;
+}
+
+dialog#CTModal::backdrop {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content h1 {
+    font-size: 1.5em;
+    padding: 20px 0;
+    text-align: justify;
+    line-height: 20px;
+    font-weight: 500;
+    display: block;
+}
+
+.modal-content p {
+    color: whitesmoke;
+    font-size: 1em;
+    font-weight: 300;
+    display: block;
+}
+
+.modal-content .submit {
+    border: none;
+    color: white;
+    background: #FD5805;
+    padding: 12px 20px;
+    margin: 5px;
+    font-size: 1em;
+    border-radius: 5px;
+    transition: .3s;
+}
+
+.modal-content .closeModal {
+    color: white;
+    border: none;
+    background: #8B0000;
+    padding: 12px 20px;
+    margin: 5px;
+    font-size: 1em;
+    border-radius: 5px;
+    transition: .3s;
+}
+
+.modal-content .btns {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5px;
+}
+
+.modal-content .submit:hover {
+    transform: scale(1.01);
+    background: #ff6a1f;
+    box-shadow: 0 0 12px #FD5805;
+}
+
+.modal-content .closeModal:hover {
+    transform: scale(1.01);
+    background: #a30000;
+    box-shadow: 0 0 10px 3px darkred;
+}
+
+#CTModal input[type="text"] {
+    height: 40px;
+    padding: 12px;
+    box-sizing: border-box;
+    border: 1px solid #222;
+    background-color: #1d1b1b54;
+    color: white;
+    width: 100%;
+    font-size: .8em;
+    border-radius: 7px;
+    outline: none;
+    transition: .3s;
+}
+
+#CTModal input[type="text"]:focus {
+    border: 1px solid #FD5805;
+    box-shadow: 0 0 8px #FD5805;
+}
+
+.file-upload-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    max-width: 100%;
+}
+
+.file-upload-label {
+    padding: 12px 24px;
+    background-color: #080808ff;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-align: center;
+    font-size: 1em;
+    font-weight: 400;
+    box-sizing: border-box;
+    order: 1;
+    width: 100%;
+}
+
+.file-upload-label:hover {
+    box-shadow: 0 0 10px 3px #333;
+}
+
+#file-input {
+    display: none;
+}
+
+.preview-box {
+    width: 300px;
+    height: 150px;
+    border-radius: 4px;
+    overflow: hidden;
+    display: flex;
+    background-color: #111;
+    border: 2px solid #333;
+    order: 2;
+}
+
+#image-preview {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: none;
+}
+
+#CTModal legend {
+    color: white;
+    font-size: 1em;
+    padding: 0 5px;
+}
+
+#CTModal fieldset {
+    border: 1px solid #444;
+    border-radius: 8px;
+    padding: 10px;
+    align-items: center;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5px;
+}
+
+#CTModal label {
+    color: white;
+    font-size: 1em;
+}
+
+.add {
+    background-color: transparent;
+    font-size: 1em;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+    width: 100%;
+    margin: 00;
+    outline: none;
+    transition: .3s;
+}
+
+.add:hover {
+    background-color: #FD5805;
+    border: 1px solid #FD5805;
+    box-shadow: 0 0 15px 5px #FD5805;
+}
+
+/* Fim Criar Treino */
+
+/* Pop-up Pedido */
+
+    dialog {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        max-width: 37%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0.8);
+        padding: 0px;
+        border: none;
+        border-radius: 5px;
+        opacity: 0;
+        transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        background-color: #0E1113;
+        border-radius: 10px;
+        height: auto;
+        color: white;
+        padding: 20px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    dialog[open] {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    dialog:not([open]) {
+        display: none;
+    }
+
+    dialog::backdrop {
+        background: rgba(0, 0, 0, 0);
+        transition: background 0.3s ease;
+    }
+
+    dialog[open]::backdrop {
+        background: rgba(0, 0, 0, 0.8);
+    }
+
+    .btn-modal {
+        position: relative;
+        color: white;
+        background: transparent;
+        border: 1px solid #FD5805;
+        padding: 10px;
+        margin: 5px;
+        font-size: 1em;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: .3s;
+    }
+
+    .btn-modal:hover {
+        background-color: #FD5805;
+        border: 1px solid #FD5805;
+        box-shadow: 0 0 15px 5px #FD5805;
+        transform: scale(1.05);
+    }
+
+    .btn-modal.pulse {
+        animation: pulse 2s infinite;
+    }
+
+    .badge {
+        position: absolute;
+        top: -5px;
+        right: -5px;
+        background-color: red;
+        color: white;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        font-weight: bold;
+        animation: badge-pulse 1.5s infinite;
+    }
+
+    .modal-content {
+        animation: content-appear 0.4s ease-out 0.1s both;
+    }
+
+    .modal-content p {
+        color: lightgray;
+        font-size: .8em;
+        font-weight: 300;
+        display: block;
+        margin-bottom: 15px;
+        animation: slide-in 0.5s ease-out 0.3s both;
+    }
+
+    .warning {
+        color: red;
+        display: block;
+        margin-bottom: 10px;
+        padding: 5px;
+        border-radius: 3px;
+        background-color: rgba(255, 0, 0, 0.1);
+        animation: shake 0.5s ease-out;
+    }
+
+    .modal-content textarea {
+        width: 100%;
+        height: 90px;
+        background-color: #333;
+        border: 1px solid #444;
+        color: white;
+        display: flex;
+        align-items: start;
+        justify-content: flex-start;
+        border-radius: 5px;
+        transition: all 0.3s;
+        padding: 5px;
+        box-sizing: border-box;
+        animation: slide-in 0.5s ease-out 0.4s both;
+    }
+
+    .modal-content textarea:focus {
+        outline: none;
+        border-color: #FD5805;
+        box-shadow: 0 0 0 2px rgba(253, 88, 5, 0.2);
+    }
+
+    .modal-content .open {
+        color: white;
+        background: #FD5805;
+        width: 120px;
+        height: 35px;
+        margin: 5px;
+        font-size: .9em;
+        border-radius: 2px;
+        border: none;
+        cursor: pointer;
+        transition: .3s;
+        animation: slide-in 0.5s ease-out 0.5s both;
+    }
+
+    .modal-content .open.off {
+        background: #fd580591;
+        cursor: not-allowed;
+    }
+
+    .modal-content .close {
+        color: white;
+        background: #333;
+        width: 120px;
+        height: 35px;
+        margin: 5px;
+        font-size: .9em;
+        border-radius: 2px;
+        border: none;
+        transition: .3s;
+        animation: slide-in 0.5s ease-out 0.6s both;
+    }
+
+    .modal-content .btns {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 5px;
+    }
+
+    .modal-content .open:hover:not(.off) {
+        transform: scale(1.03);
+        box-shadow: 0 0 10px 3px #FD5805;
+        background-color: #e65005;
+    }
+
+    .modal-content .open.off:hover {
+        transform: scale(1.03);
+        background-color: #e65005;
+        box-shadow: 0 0 10px 3px #fd58059c;
+    }
+
+    .modal-content .close:hover {
+        transform: scale(1.03);
+        box-shadow: 0 0 2px 3px #333;
+        background-color: #444;
+    }
+
+    /* Animações */
+    @keyframes pulse {
+        0% {
+            box-shadow: 0 0 0 0 rgba(253, 88, 5, 0.7);
+        }
+
+        70% {
+            box-shadow: 0 0 0 10px rgba(253, 88, 5, 0);
+        }
+
+        100% {
+            box-shadow: 0 0 0 0 rgba(253, 88, 5, 0);
+        }
+    }
+
+    @keyframes badge-pulse {
+
+        0%,
+        100% {
+            transform: scale(1);
+        }
+
+        50% {
+            transform: scale(1.2);
+        }
+    }
+
+    @keyframes content-appear {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes slide-in {
+        from {
+            opacity: 0;
+            transform: translateX(-20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    .sending {
+        animation: sending 1.5s infinite;
+    }
+
+    @keyframes sending {
+        0% {
+            opacity: 1;
+        }
+
+        50% {
+            opacity: 0.5;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @media screen and (max-width: 878px) {
+
+        dialog {
+            max-width: 80%;
+            width: 100%;
+            height: 350px;
+            align-items: center;
+            justify-content: center;
+            overflow: auto;
+        }
+
+        #modal h1{
+            text-align: left;
+            font-size: 1.3em;
+        }
+
+        .modal-content p {
+            font-size: .9em;
+        }
+
+        .modal-content textarea {
+            width: 100%;
+            height: 150px;
+            font-size: 1em;
+        }
+
+        .modal-content .open {
+            padding: 5px;
+            font-size: 1em;
+        }
+
+        .modal-content .close {
+            padding: 5px;
+            font-size: 1em;
+        }
+
+        .btn-modal {
+            width: 100%;
+            padding: 5px;
+            font-size: .9em;
+        }
+
+    }
+
+/* Fim Pop-up Pedido */
+
+/* Estilo mobile */
+
+@media screen and (max-width: 878px) {
+
+    .interface {
+        margin: auto 1vw auto 5vw;
+    }
+
+    .header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 0px;
+    }
+
+    .header h1 {
+        font-size: 1.5em;
+    }
+
+    article.trainingP {
+        height: 70px;
+        margin-left: 10px;
+        padding-left: 15px;
+    }
+
+    a article.trainingP {
+        font-size: 1.2em;
+    }
+
+    section.trainings {
+        margin-right: 10px;
+        padding: 0;
+        max-width: 90%;
+    }
+
+    .btn {
+        padding: 6px;
+        margin: 0px 10px;
+        font-size: .9em;
+    }
+
+    .buttons {
+        justify-content: space-between;
+    }
+
+
+    .add {
+        padding: 10px;
+        margin: 0 0;
+    }
+
+    .nada {
+        font-size: 1.3em;
+        text-align: center;
+    }
+
+    .search #searchBar {
+        padding: 10px;
+        margin: 15px 0;
+    }
+
+    article.training {
+        width: 100%;
+        height: 80px;
+        margin: 20px 0;
+    }
+
+    article.training .txt-training {
+        display: flex;
+        line-height: 20px;
+        align-items: center;
+        justify-content: center;
+        color: white;
+    }
+
+    article.training .time-training span {
+        margin: 10px;
+        color: lightgray;
+    }
+
+    article.training img {
+        width: 70px;
+        height: 70px;
+        margin: 5px;
+        border-radius: 5px;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    a article {
+        transition: .2s;
+    }
+
+    a article:hover {
+        transform: scale(1.008);
+    }
+
+    article.training span#nome {
+        color: white;
+        font-size: 1em;
+        font-weight: 500;
+        display: inline-block;
+        max-width: 900px;
+        min-width: 0;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        vertical-align: top;
+    }
+
+    dialog#CTModal {
+        padding: 20px;
+        height: 600px;
+        width: 500px;
+    }
+
+    dialog#CTModal header {
+        display: flex;
+        align-items: start;
+    }
+
+    .modal-content h1 {
+        font-size: 1.3em;
+        padding: 0;
+        text-align: center;
+    }
+
+    #CTModal fieldset {
+        display: grid;
+    }
+}
